@@ -8,7 +8,15 @@ app
     .use(express.json({ limit: '20MB' }))
     .use(bodyParser.urlencoded({ limit: '50mb', extended: true }))
     .post('/bfhl', (req, res) => {
+        try{
         const {data=[]} = req.body; // let data=[“a”,”1”,”334”,”4”,”R”]
+        if (!data.length) {
+            res.status(400).json({
+                is_success: false,
+                message: "Invalid data"
+            });
+            return;
+        }
         let odd_numbers = [];
         let even_numbers = [];
         let alphabets = [];
@@ -31,8 +39,14 @@ app
             odd_numbers,
             even_numbers,
             alphabets
-            
+
         });
+    }catch(err){
+        res.status(500).json({
+            is_success: false,
+            message: "Internal server error"
+        });
+    }
     });
 
 
