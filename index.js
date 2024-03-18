@@ -49,7 +49,9 @@ app
     }
     });
 
-
+app.use("/",(res,res)=>{
+res.json({"hello"});
+});
 //     Request
 // {
 // "data": [“a”,”1”,”334”,”4”,”R”]
