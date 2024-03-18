@@ -22,7 +22,7 @@ app
         let alphabets = [];
         data.forEach((item) => {
             if (isNaN(item)) {
-                alphabets.push(item);
+                alphabets.push(item.toUpperCase());
             } else {
                 if (item % 2 === 0) {
                     even_numbers.push(item);
