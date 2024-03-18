@@ -33,9 +33,9 @@ app
         });
         res.json({
             is_success: true,
-            user_id: "ishan_singla_29042003",
-            email: "ishan0648.be21@chitkara.edu.in",
-            roll_number: "2110990648",
+            user_id: "prince_vasoya_29042003",
+            email: "prince1065.be21@chitkara.edu.in",
+            roll_number: "2110991065",
             odd_numbers,
             even_numbers,
             alphabets
